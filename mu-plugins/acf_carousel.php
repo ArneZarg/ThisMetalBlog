@@ -1,4 +1,4 @@
-<?php function university_post_types(){
+<?php function decade_carousel(){
 		register_post_type('slider', array(
 			'supports' => array('title', 'editor', 'excerpt'),
 			'rewrite' => array('slug' => 'slider'),
@@ -14,24 +14,5 @@
 		));
 	}
 
-	add_action('init', 'university_post_types');//to create new post type. 'init' is first argument, 2nd argument is a function that you define.
-
-	//Creates the Album Reviews post type
-	function Album_Reviews(){
-		register_post_type('reviews', array(
-			'supports' => array('title', 'editor', 'excerpt'),
-			'rewrite' => array('slug' => 'reviews'),
-			'has_archive' => true,
-			'public' => true,
-			'labels' => array(
-				'name'=> 'Reviews',
-				'add_new_item' => 'Add New Review',
-				'edit_item' => 'Edit Review',
-				'singular_name'=> 'Review'
-			),
-			'menu_icon' => 'dashicons-album'
-		));
-	}
-
-	add_action('init', 'Album_Reviews');
+	add_action('init', 'decade_carousel');//to create new post type. 'init' is first argument, 2nd argument is a function that you define.
 ?>
